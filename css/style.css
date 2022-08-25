@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+ * {
+     margin: 0;
+     padding: 0;
+      scroll-behavior: smooth;
+}
+
+html{
+  overflow-y: scroll!important;
+}
+ html, body{
+     font-family: 'Raleway', sans-serif;
+     overflow-x: hidden!important;
+}
+    
+}
+ .panel-inner {
+     width: 100%;
+     max-width: 1400px;
+     margin: 0 auto;
+}
+
+/*Navbar CSS*/
+ nav {
+     font-size: 20px;
+     background-color: transparent!important;
+}
+ .navbar {
+     padding-top: 20px;
+}
+ nav li a{
+     color: white!important;
+}
+ a.navbar-brand {
+     font-size: 20px;
+     color: white!important;
+}
+ .navbar-default{
+     border-color: transparent;
+}
+ nav li a i{
+     padding-right: 10px;
+     color: white;
+}
+ nav.navbar.shrink {
+     background: linear-gradient(#0007, #0000),#123!important;
+}
+ nav.shrink a {
+     color:white!important;
+}
+ .shrink li {
+     margin-top: -10px;
+}
+ nav.navbar-brand.shrink {
+     color: white!important;
+}
+ nav.shrink .navbar-brand {
+     color:white!important;
+     margin-top: -15px;
+}
+ nav.shrink .navbar-brand:hover {
+     color:white;
+}
+ nav.shrink .navbar-toggle {
+     margin-top:-10px;
+     color:white!important;
+}
+/*Hero CSS*/
+ .header{
+     background: linear-gradient(#0007, #0000),#123;
+     margin: 0;
+     height: 100vh;
+     overflow: hidden;
+}
+ @keyframes firework {
+     0% {
+         transform: translate(var(--x), 60vmin);
+         width: var(--initialSize);
+         opacity: 1;
+    }
+     50% {
+         width: 0.5vmin;
+         opacity: 1;
+    }
+     100% {
+         width: var(--finalSize);
+         opacity: 0;
+    }
+}
+ @keyframes fireworkPseudo {
+     0% {
+         transform: translate(-50%, -50%);
+         width: var(--initialSize);
+         opacity: 1;
+    }
+     50% {
+         width: 0.5vmin;
+         opacity: 1;
+    }
+     100% {
+         width: var(--finalSize);
+         opacity: 0;
+    }
+}
+ .firework, .firework::before, .firework::after {
+     --initialSize: 0.5vmin;
+     --finalSize: 45vmin;
+     --particleSize: 0.2vmin;
+     --color1: yellow;
+     --color2: khaki;
+     --color3: white;
+     --color4: lime;
+     --color5: gold;
+     --color6: mediumseagreen;
+     --y: 0vmin;
+     --x: -50%;
+     content: "";
+     animation: firework 2s infinite;
+     position: absolute;
+     top: 29%;
+     left: 50%;
+     transform: translate(-50%, var(--y));
+     width: var(--initialSize);
+     aspect-ratio: 1;
+     background: 
+    /* radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 0%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 0%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 100%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 100%, */
+     radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 50% 0%, radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 50%, radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 50% 100%, radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 0% 50%, 
+    /* bottom right */
+     radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 80% 90%, radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 95% 90%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 90% 70%, radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 60%, radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 55% 80%, radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 70% 77%, 
+    /* bottom left */
+     radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 22% 90%, radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 45% 90%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 70%, radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 10% 60%, radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 31% 80%, radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 28% 77%, radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 13% 72%, 
+    /* top left */
+     radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 80% 10%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 95% 14%, radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 90% 23%, radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 100% 43%, radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 85% 27%, radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 77% 37%, radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 60% 7%, 
+    /* top right */
+     radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 22% 14%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 45% 20%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 34%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 10% 29%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 31% 37%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 28% 7%, radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 13% 42% ;
+     background-size: var(--initialSize) var(--initialSize);
+     background-repeat: no-repeat;
+}
+ .firework::before {
+     transform: translate(-20vmin, -2vmin) rotate(40deg) scale(1.3) rotateY(40deg);
+     transform: translate(-50%, -50%) rotate(40deg) scale(1.3) rotateY(40deg);
+     animation: fireworkPseudo 2s infinite;
+}
+ .firework::after {
+     transform: translate(44vmin, -50%) rotate(170deg) scale(1.15) rotateY(-30deg);
+     transform: translate(-50%, -50%) rotate(170deg) scale(1.15) rotateY(-30deg);
+     animation: fireworkPseudo 2s infinite;
+}
+ .firework:nth-child(2), .firework:nth-child(2)::before, .firework:nth-child(2)::after {
+     --color1: pink;
+     --color2: violet;
+     --color3: fuchsia;
+     --color4: orchid;
+     --color5: plum;
+     --color6: lavender;
+     --x: 30vmin;
+     --finalSize: 40vmin;
+     left: 30%;
+     top: 15%;
+     animation-delay: -0.25s;
+}
+ .firework:nth-child(3), .firework:nth-child(3)::before, .firework:nth-child(3)::after {
+     --color1: cyan;
+     --color2: lightcyan;
+     --color3: lightblue;
+     --color4: PaleTurquoise;
+     --color5: SkyBlue;
+     --color6: lavender;
+     --x: -30vmin;
+     --y: 7vmin;
+     --finalSize: 35vmin;
+     left: 70%;
+     top: 20%;
+     animation-delay: -0.4s;
+}
+ .firework:nth-child(4), .firework:nth-child(4)::before, .firework:nth-child(4)::after {
+     --color1: cyan;
+     --color2: lightcyan;
+     --color3: lightblue;
+     --color4: PaleTurquoise;
+     --color5: SkyBlue;
+     --color6: lavender;
+     --x: -30vmin;
+     --y: 7vmin;
+     --finalSize: 35vmin;
+     left: 10%;
+     top: 50%;
+     animation-delay: -0.4s;
+}
+ .firework:nth-child(5), .firework:nth-child(5)::before, .firework:nth-child(5)::after {
+     --color1: pink;
+     --color2: violet;
+     --color3: fuchsia;
+     --color4: orchid;
+     --color5: plum;
+     --color6: lavender;
+     --x: -30vmin;
+     --y: 7vmin;
+     --finalSize: 35vmin;
+     left: 90%;
+     top: 50%;
+     animation-delay: -0.4s;
+}
+ h1 {
+     color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 50%;
+     font-size: 50px;
+     text-align: center;
+}
+ .arrow {
+     white-space: nowrap;
+     font-size: 4rem;
+     position: absolute;
+     right: 0;
+     bottom: -75px;
+     left: 0;
+     margin: auto;
+     color: white!important;
+     width: 40px;
+     height: 40px;
+     transform: translateY(0);
+     -webkit-transition: all 500ms ease-in-out;
+     -moz-transition: all 750ms ease-in-out;
+     -ms-transition: all 750ms ease-in-out;
+     -o-transition: all 750ms ease-in-out;
+     transition: all 750ms ease-in-out;
+}
+ .lift {
+     transform: translateY(14px);
+}
+ .hero-image img {
+     margin-top: 20%;
+     width: 100%;
+     max-width: 465px;
+     object-fit: contain;
+}
+
+ @media only screen and (max-width: 768px) {
+     .hero-image{
+         display: none;
+    }
+}
+
+/*About Us CSS*/
+#about{
+  padding-top: 60px;
+}
+
+ .home-header {
+     background-size: contain;
+     height: 650px;
+     background-repeat: no-repeat;
+}
+ .img-rounded-left img {
+     border-radius: 0 500px 500px 0;
+}
+ .home-header img, .inner-header img {
+     filter: brightness(.8);
+}
+ h2 {
+     position: relative;
+     padding: 0;
+     margin: 0;
+     font-family: "Raleway", sans-serif;
+     font-weight: 300;
+     font-size: 40px;
+     color: #080808;
+     -webkit-transition: all 0.4s ease 0s;
+     -o-transition: all 0.4s ease 0s;
+     transition: all 0.4s ease 0s;
+}
+ h2 span {
+     display: block;
+     font-size: 0.5em;
+     line-height: 1.3;
+}
+ h2 em {
+     font-style: normal;
+     font-weight: 600;
+}
+ .about-us h2 {
+     text-transform: capitalize;
+     padding-top: 20px;
+}
+ .about-us h2:before {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 60px;
+     height: 2px;
+     content: "";
+     background-color: #123;
+}
+ .about-us h2 span {
+     font-size: 13px;
+     font-weight: 500;
+     text-transform: uppercase;
+     letter-spacing: 4px;
+     line-height: 3em;
+     padding-left: 0.25em;
+     color: rgba(0, 0, 0, 0.8);
+     padding-bottom: 10px;
+}
+
+/*Gallery CSS*/
+
+#gallery{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+img{
+    object-fit:cover;
+}
+
+.scroll-animations > .scrollsection {
+  padding: 10vh 10vh 10vh 10vmax;
+  width: 250vh;
+}
+.scroll-animations > .scrollsection > .item {
+  display: inline-block;
+  position: relative;
+  margin: 0 -30vh 0 3vh;
+}
+.scroll-animations > .scrollsection > .item::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.scroll-animations > .scrollsection > .item.-big {
+  height: 80vh;
+  width: 60vh;
+}
+.scroll-animations > .scrollsection > .item.-big.-horizontal {
+  height: 60vh;
+  width: 80vh;
+}
+.scroll-animations > .scrollsection > .item.-normal {
+  height: 60vh;
+  width: 45vh;
+  z-index: 1;
+}
+.scroll-animations > .scrollsection > .item.-normal.-horizontal {
+  height: 45vh;
+  width: 60vh;
+}
+.scroll-animations > .scrollsection > .item.-normal:nth-of-type(3n) {
+  bottom: 5vh;
+}
+.scroll-animations > .scrollsection > .item.-normal:nth-of-type(4n) {
+  bottom: -5vh;
+}
+.scroll-animations > .scrollsection > .item.-small {
+  height: 40vh;
+  width: 30vh;
+  z-index: 2;
+}
+.scroll-animations > .scrollsection > .item.-small.-horizontal {
+  height: 30vh;
+  width: 40vh;
+}
+.scroll-animations > .scrollsection > .item.-small:nth-of-type(3n) {
+  bottom: 13vh;
+}
+.scroll-animations > .scrollsection > .item.-small:nth-of-type(4n) {
+  bottom: -13vh;
+}
+.scroll-animations > .scrollsection > .item > .image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(0) translateY(0) scale(1);
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease;
+}
+.scroll-animations > .scrollsection > .item:nth-of-type(4n) > .image {
+  transform: translateX(-30vh) translateY(-30vh) scale(.8);
+  transition-delay: 0;
+}
+.scroll-animations > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+  transform: translateX(30vh) translateY(30vh) scale(.8);
+  transition-delay: .05s;
+}
+.scroll-animations > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+  transform: translateX(-30vh) translateY(30vh) scale(.8);
+  transition-delay: .1s;
+}
+.scroll-animations > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+  transform: translateX(-30vh) translateY(-30vh) scale(.8);
+  transition-delay: .15s;
+}
+.scroll-animations > .scrollsection > .item > .image.-active {
+  transform: translateX(0) translateY(0) scale(1);
+  opacity: .8;
+  pointer-events: auto;
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease;
+}
+.scroll-animations > .scrollsection > .item > .image.-clicked {
+  transform: translateX(0) translateY(0) scale(2);
+  opacity: 1;
+  pointer-events: auto;
+  filter: grayscale(0);
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease;
+}
+.scroll-animations > .scrollsection > .item > .image.-active:hover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
+}
+ @media only screen and (max-width: 768px) {
+.scroll-animations {
+    transform: translateY(3%);
+}
+}
+
+/*Contact Us CSS*/
+ .align-center {
+     text-align: center;
+}
+ .get-in-touch .row {
+     margin: -20px 0;
+}
+ .get-in-touch .row:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+ .get-in-touch .row .col {
+     padding: 0 20px;
+     float: left;
+     box-sizing: border-box;
+}
+ .get-in-touch .row .col.x-50 {
+     width: 50%;
+}
+ .get-in-touch .row .col.x-100 {
+     width: 100%;
+}
+ .content-wrapper {
+     min-height: 100%;
+     position: relative;
+}
+ .get-in-touch {
+     max-width: 650px;
+     margin: 0 auto;
+     position: relative;
+     top: 50%;
+     transform: translateY(-90%);
+}
+ .get-in-touch .title {
+     text-align: center;
+     font-family: Raleway, sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     font-size: 36px;
+     line-height: 48px;
+     padding-bottom: 48px;
+     color: black;
+}
+ .contact-form .form-field {
+     position: relative;
+     margin: 32px 0;
+}
+ .contact-form .input-text {
+     display: block;
+     width: 100%;
+     height: 36px;
+     border-width: 0 0 2px 0;
+     border-color: #000;
+     font-size: 18px;
+     line-height: 26px;
+     font-weight: 400;
+}
+ .contact-form .input-text:focus {
+     outline: none;
+}
+ .contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+     transform: translateY(-24px);
+}
+ .contact-form .label {
+     position: absolute;
+     left: 20px;
+     bottom: 11px;
+     font-size: 18px;
+     line-height: 26px;
+     font-weight: 400;
+     color: #888;
+     cursor: text;
+     transition: transform 0.2s ease-in-out;
+}
+ .contact-form .submit-btn {
+     display: inline-block;
+     background-color: #000;
+     color: #fff;
+     font-family: Raleway, sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 16px;
+     line-height: 24px;
+     padding: 8px 16px;
+     border: none;
+     cursor: pointer;
+}
+ #contact iframe{
+     border-radius: 10px;
+     margin-left: 50px;
+     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+ @media only screen and (max-width: 768px) {
+    .get-in-touch {
+     transform: translateY(-15%);
+ }
+  #contact iframe{
+     margin-left: 0px!important;
+   }
+}
+
+/*Footer CSS*/
+ .site-footer {
+     background: linear-gradient(#0007, #0000),#123!important;
+     padding:45px 0 20px;
+     font-size:15px;
+     line-height:24px;
+     color:#737373;
+}
+ .site-footer hr {
+     border-top-color:#bbb;
+     opacity:0.5 
+}
+ .site-footer hr.small {
+     margin:20px 0 
+}
+ .site-footer h6 {
+     color:#fff;
+     font-size:16px;
+     text-transform:uppercase;
+     margin-top:5px;
+     letter-spacing:2px 
+}
+ .site-footer a {
+     color:#737373;
+}
+ .site-footer a:hover {
+     color:#3366cc;
+     text-decoration:none;
+}
+ .footer-links {
+     padding-left:0;
+     list-style:none 
+}
+ .footer-links li {
+     display:block 
+}
+ .footer-links a {
+     color:#737373 
+}
+ .footer-links a:active,.footer-links a:focus,.footer-links a:hover {
+     color:#3366cc;
+     text-decoration:none;
+}
+ .footer-links.inline li {
+     display:inline-block 
+}
+ .site-footer .social-icons {
+     text-align:right 
+}
+ .site-footer .social-icons a {
+     width:40px;
+     height:40px;
+     line-height:40px;
+     margin-left:6px;
+     margin-right:0;
+     border-radius:100%;
+     background-color:#33353d 
+}
+ .copyright-text {
+     margin:0 
+}
+ @media (max-width:991px) {
+     .site-footer [class^=col-] {
+         margin-bottom:30px 
+    }
+}
+ @media (max-width:767px) {
+     .site-footer {
+         padding-bottom:0 
+    }
+     .site-footer .copyright-text,.site-footer .social-icons {
+         text-align:center 
+    }
+}
+ .social-icons {
+     padding-left:0;
+     margin-bottom:0;
+     list-style:none 
+}
+ .social-icons li {
+     display:inline-block;
+     margin-bottom:4px 
+}
+ .social-icons li.title {
+     margin-right:15px;
+     text-transform:uppercase;
+     color:#96a2b2;
+     font-weight:700;
+     font-size:13px 
+}
+ .social-icons a{
+     background-color:#eceeef;
+     color:#818a91;
+     font-size:16px;
+     display:inline-block;
+     line-height:44px;
+     width:44px;
+     height:44px;
+     text-align:center;
+     margin-right:8px;
+     border-radius:100%;
+     -webkit-transition:all .2s linear;
+     -o-transition:all .2s linear;
+     transition:all .2s linear 
+}
+ .social-icons a:active,.social-icons a:focus,.social-icons a:hover {
+     color:#fff;
+     background-color:#29aafe 
+}
+ .social-icons.size-sm a {
+     line-height:34px;
+     height:25px;
+     width:25px;
+     font-size:14px 
+}
+ .social-icons a.facebook:hover {
+     background-color:#3b5998 
+}
+ .social-icons a.twitter:hover {
+     background-color:#00aced 
+}
+ .social-icons a.linkedin:hover {
+     background-color:#007bb6 
+}
+ @media (max-width:767px) {
+     .social-icons li.title {
+         display:block;
+         margin-right:0;
+         font-weight:600 
+    }
+}
