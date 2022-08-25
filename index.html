@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Factory Pattern</title>
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <!-- Bootstrap CDN-->
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js" integrity="sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Font Awesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Main Stylesheet -->
+        <link rel='stylesheet' id='stylesheet'  href='css/style.css' type='text/css' media='all' />
+        <!-- jQuery-->
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js?ver=3.1.0' id='jquery-js'></script>
+        <!-- Main JS File -->
+        <script type='text/javascript' src='js/child-app.js' id='child-app-js'></script>
+        <!--Locomotive CSS/JS-->
+        <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
+        <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
+        <!--Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <header role="header">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse" role="button">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a href="#home" class="navbar-brand">Factory Pattern</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right js-nav">
+                            <li>
+                                <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+                            </li>
+                            <li>
+                                <a href="#about"><i class="fa-solid fa-circle-info"></i>About</a>
+                            </li>
+                            <li>
+                                <a href="#gallery"><i class="fa-solid fa-camera"></i>Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a>
+                            </li>
+                        </ul>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="row header" id="home">
+            <div class="panel-inner">
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="col-xs-12 col-sm-6">
+                    <h1>Welcome to Factory Pattern</h1>
+                    <a href="#about"> <i class="fa fa-angle-down arrow"></i></a>
+                </div>
+                <div class="col-xs-12 col-sm-6 hero-image">
+                    <img src="img/rocket.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="about">
+            <div class="col-xs-12 col-sm-12 col-md-6 home-header img-rounded-left visible">
+                <img src="img/team.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="about-us">
+                    <h2>About Us
+                        <span>Unlocking new possibilities</span>
+                    </h2>
+                </div>
+                <h3>
+                    A partner, not a supplier
+                </h3>
+                <p>
+                    The work we do is aligned with your business strategy.
+                </p>
+                <p>
+                    In other words, everything we do together helps grow your business.
+                </p>
+                <h3>
+                    Question everything
+                </h3>
+                <p>
+                    Do you need something new or can we improve what you have?
+                </p>
+                <p>
+                    We ask uncommon questions to help prioritise the digital activities that have the most impact on your bottom line.
+                </p>
+                <h3>
+                    No guesswork
+                </h3>
+                <p>
+                    Evidence trumps assumption.
+                </p>
+                <p>
+                    We use data to inform everything we do. This helps to get the results you want.
+                </p>
+                <h3>
+                    No gobble-de-gook!
+                </h3>
+                <p>
+                    We avoid "techy" talk and favour a straight talking, plain English approach.
+                </p>
+                <p>
+                    This open and honest way of communicating leads to long-term and fruitful partnerships.
+                </p>
+            </div>
+        </div>
+        <div class="row" id="gallery">
+            <div class="panel-inner">
+                <div class="col-xs-12">
+                    <div class='scroll-animations' data-scroll-container>
+                        <div class='scrollsection' data-scroll-section>
+                            <div class='item -normal' data-scroll data-scroll-speed="2">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2021/11/EDIN-header-1024x895.jpg'>
+                            </div>
+                            <div class='item -big' data-scroll data-scroll-speed="1">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2021/11/JACK-header-1024x894.jpg'>
+                            </div>
+                            <div class='item -small -horizontal' data-scroll data-scroll-speed="4">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2021/11/COCO-header-1024x898.jpg'>
+                            </div>
+                            <div class='item -normal' data-scroll data-scroll-speed="3">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2021/11/REND-header-1024x894.jpg'>
+                            </div>
+                            <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2021/11/CLEA-header-1024x893.jpg'>
+                            </div>
+                            <div class='item -big -horizontal' data-scroll data-scroll-speed="4">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2021/11/HASK-header-1-1024x894.jpg'>
+                            </div>
+                            <div class='item -small' data-scroll data-scroll-speed="2">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2022/07/Header.jpg'>
+                            </div>
+                            <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2022/08/GILM-header-1024x894.jpg'>
+                            </div>
+                            <div class='item -small -horizontal' data-scroll data-scroll-speed="3">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2022/08/PROT-header-1024x894.jpg'>
+                            </div>
+                            <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2022/08/SAIN-header-1024x894.jpg'>
+                            </div>
+                            <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+                                <img class='image' src='https://factorypattern.co.uk/wp-content/uploads/2022/08/BRAN-header-1024x894.jpg'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="contact">
+            <div class="panel-inner">
+                <div class="col-xs-12 col-sm-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9847.410619011656!2d-2.076723!3d51.900153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48711b9ead4915d3%3A0x200037eff0424519!2sParker%20Court%2C%20Knapp%20Ln%2C%20Cheltenham%20GL50%203QJ%2C%20UK!5e0!3m2!1sen!2sus!4v1661418467016!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="get-in-touch">
+                        <h1 class="title">Get in touch</h1>
+                        <form class="contact-form row">
+                            <div class="form-field col x-50">
+                                <input id="name" class="input-text js-input" type="text" required>
+                                <label class="label" for="name">Name</label>
+                            </div>
+                            <div class="form-field col x-50">
+                                <input id="email" class="input-text js-input" type="email" required>
+                                <label class="label" for="email">E-mail</label>
+                            </div>
+                            <div class="form-field col x-100">
+                                <input id="message" class="input-text js-input" type="text" required>
+                                <label class="label" for="message">Message</label>
+                            </div>
+                            <div class="form-field col x-100 align-center">
+                                <input class="submit-btn" type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p>We unlock new possibilities… through research, creativity, technology and our people.</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+                        <a href="#">Factory Pattern</a>.
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#" target="__blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a class="twitter" href="#" target="__blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a class="linkedin" href="#" target="__blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'></script>
+</html>
